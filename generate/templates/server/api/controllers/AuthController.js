@@ -80,7 +80,10 @@ module.exports = {
     },
 
     logout: function(req, res) {
-        req.logout();
+        /*
+          TODO: revoke token
+          https://github.com/auth0/express-jwt/issues/77
+        */
         res.send({
             success: true,
             message: 'logoutSuccessful'
